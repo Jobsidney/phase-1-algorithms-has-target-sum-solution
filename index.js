@@ -1,23 +1,23 @@
 function hasTargetSum(array, target) {
-  //n 
-for (let i = 0; i < array.length; i++) {
-  //nested loop n*2
-  let firstComparison = target-array[i];
-  for (let j = 0; j < array.length; j++) {
-    if (array[j] === firstComparison  && i!==j){
-      return true;
-    }
+  // Write your algorithm here
+  const visitedNums = new Set();
+  for (const number of array) {
+    const complement = target - number;
+    if (visitedNums.has(complement))
+    return true;
+    visitedNums.add(number);
+    console.log(visitedNums);
   }
-  return false;
+  return false
 }
-}
+
 console.log(hasTargetSum([22, 19, 4, 6, 30],25));
 
 
 /* 
   Write the Big O time complexity of your function here
 
-  time complexity:0(n^2)
+  time complexity:0(n)
   space complexity: 0(n)
 */
 
