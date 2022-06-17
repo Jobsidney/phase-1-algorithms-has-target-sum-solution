@@ -25,6 +25,7 @@ console.log(hasTargetSum([22, 19, 4, 6, 30],25));
   Add your pseudocode here
   for loop iteration to array given
   find first comparison by substracting it from target
+  iterate through values as you add them to object
 
 */
 
